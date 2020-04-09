@@ -32,6 +32,8 @@ public class Camera_satsuei_three : MonoBehaviour
     public GameObject complete;
     public GameObject titlebutton;
 
+    public GameObject timelimit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,8 @@ public class Camera_satsuei_three : MonoBehaviour
         piece.SetActive(false);
         titlebutton.SetActive(false);
 
+        timelimit.SetActive(false);
+
         webCamTexture = new WebCamTexture(wi, he);
         rawImage.texture = webCamTexture;
 
@@ -56,8 +60,10 @@ public class Camera_satsuei_three : MonoBehaviour
     {
         if (pushFlag == true)
         {
+            timelimit.SetActive(true);
             time += Time.deltaTime;
             count = 10 - (int)time;
+
             if (count == -1)
             {
                 piece.SetActive(true);
@@ -68,6 +74,7 @@ public class Camera_satsuei_three : MonoBehaviour
                 }
 
                 picture.SetActive(false);
+                Destroy(timelimit);
                 Destroy(memory);
                 Destroy(count_down);
                 //webCamTexture.Stop();
