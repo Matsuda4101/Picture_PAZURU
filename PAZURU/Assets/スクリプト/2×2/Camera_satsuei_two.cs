@@ -30,6 +30,8 @@ public class Camera_satsuei_two : MonoBehaviour
     public RawImage LU;
     public RawImage LD;
 
+    public RawImage ANS;
+
     public GameObject picture;
     public GameObject piece;
     public GameObject piece_set;
@@ -37,6 +39,7 @@ public class Camera_satsuei_two : MonoBehaviour
     public GameObject titlebutton;
 
     public GameObject timelimit;
+    public GameObject answer;
 
 
     void Start()
@@ -52,6 +55,7 @@ public class Camera_satsuei_two : MonoBehaviour
         titlebutton.SetActive(false);
 
         timelimit.SetActive(false);
+        answer.SetActive(false);
 
         webCamTexture = new WebCamTexture(wi, he);
         rawImage.texture = webCamTexture;
@@ -121,5 +125,11 @@ public class Camera_satsuei_two : MonoBehaviour
     {
         webCamTexture.Stop();
         SceneManager.LoadScene("TitleScene");
+    }
+
+    public void Answer()
+    {
+        answer.SetActive(true);
+        ANS.texture = RD.texture;
     }
 }

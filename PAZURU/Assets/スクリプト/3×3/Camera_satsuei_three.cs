@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class Camera_satsuei_three : MonoBehaviour
 {
     public RawImage rawImage;
@@ -26,6 +27,8 @@ public class Camera_satsuei_three : MonoBehaviour
 
     public RawImage[] image;
 
+    public RawImage ANS;
+
     public GameObject picture;
     public GameObject piece;
     public GameObject piece_set;
@@ -33,6 +36,7 @@ public class Camera_satsuei_three : MonoBehaviour
     public GameObject titlebutton;
 
     public GameObject timelimit;
+    public GameObject answer;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +52,7 @@ public class Camera_satsuei_three : MonoBehaviour
         titlebutton.SetActive(false);
 
         timelimit.SetActive(false);
+        answer.SetActive(false);
 
         webCamTexture = new WebCamTexture(wi, he);
         rawImage.texture = webCamTexture;
@@ -117,5 +122,11 @@ public class Camera_satsuei_three : MonoBehaviour
     {
         webCamTexture.Stop();
         SceneManager.LoadScene("TitleScene");
+    }
+
+    public void Answer()
+    {
+        answer.SetActive(true);
+        ANS.texture = rawImage.texture;
     }
 }
