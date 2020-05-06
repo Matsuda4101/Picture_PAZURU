@@ -101,54 +101,63 @@ public class piece_set_three : MonoBehaviour
                                         else
                                         {
                                             mistake.text = "間違ってるよ！";
+                                            mistake.color = new Color(255, 0, 0);
                                             audioSource.PlayOneShot(noseikai);
                                         }
                                     }
                                     else
                                     {
                                         mistake.text = "間違ってるよ！";
+                                        mistake.color = new Color(255, 0, 0);
                                         audioSource.PlayOneShot(noseikai);
                                     }
                                 }
                                 else
                                 {
                                     mistake.text = "間違ってるよ！";
+                                    mistake.color = new Color(255, 0, 0);
                                     audioSource.PlayOneShot(noseikai);
                                 }
                             }
                             else
                             {
                                 mistake.text = "間違ってるよ！";
+                                mistake.color = new Color(255, 0, 0);
                                 audioSource.PlayOneShot(noseikai);
                             }
                         }
                         else
                         {
                             mistake.text = "間違ってるよ！";
+                            mistake.color = new Color(255, 0, 0);
                             audioSource.PlayOneShot(noseikai);
                         }
                     }
                     else
                     {
                         mistake.text = "間違ってるよ！";
+                        mistake.color = new Color(255, 0, 0);
                         audioSource.PlayOneShot(noseikai);
                     }
                 }
                 else
                 {
                     mistake.text = "間違ってるよ！";
+                    mistake.color = new Color(255, 0, 0);
                     audioSource.PlayOneShot(noseikai);
                 }
             }
             else
             {
                 mistake.text = "間違ってるよ！";
+                mistake.color = new Color(255, 0, 0);
                 audioSource.PlayOneShot(noseikai);
             }
         }
         else
         {
             mistake.text = "間違ってるよ！";
+            mistake.color = new Color(255, 0, 0);
             audioSource.PlayOneShot(noseikai);
         }
     }
